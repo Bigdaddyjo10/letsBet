@@ -122,3 +122,34 @@ const players = [
         skill: 100
     },
 ]
+
+function separateTeams() {
+    for (let i = 0; i < players.length; i++) {
+        const teamNum = Math.ceil(Math.random() * 2)
+        players[i].teamNumber = teamNum
+    }
+}
+
+function drawTeams() {
+    const teamOne = document.getElementById("teamOne")
+    const teamTwo = document.getElementById("teamTwo")
+
+    const teamOnePlayers = players.filter((player) => player.teamNumber == 1)
+    let playerEmoji = ""
+    teamOnePlayers.forEach((players) => playerEmoji += players.emoji)
+    teamOne.innerHTML += `<p>${playerEmoji}</p>`
+    console.log('team 1', playerEmoji);
+
+    const teamTowPlayers = players.filter((player) => player.teamNumber == 2)
+    let playerTwoEmoji = ""
+    teamTowPlayers.forEach((players) => playerTwoEmoji += players.emoji)
+    teamTwo.innerHTML += `<p>${playerTwoEmoji}</p>`
+    console.log('team 2', playerTwoEmoji);
+}
+
+
+function betTenDallers() {
+    console.log("")
+}
+
+separateTeams()
