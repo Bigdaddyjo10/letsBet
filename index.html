@@ -14,7 +14,9 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h1>May the beast team win!!!</h1>
+            <div class="d-flex justify-content-center m-3">
+              <h1 class="fw-bolder">May the beast team win!!!</h1>
+            </div>
           </div>
         </div>
       </div>
@@ -23,12 +25,14 @@
       <div class="row">
         <div class="col-12">
           <div class="d-flex justify-content-around">
-            <div id="teamOne">
-              <p>Lorem ipsum dolor sit.</p>
+            <div id="teamOne d-flex">
+              <p class="fs-1 text-primary">Team Flat!</p>
+            </div>
+            <div>
+              <p class="fs-3 text-success">Your mulla: $<samp id="back">100</samp></p>
             </div>
             <div id="teamTwo">
-              <p>Lorem ipsum dolor sit.</p>
-              <p>Your mulla: $<samp id="back"></samp></p>
+              <p class="fs-1 text-warning">Team Phat!</p>
             </div>
           </div>
         </div>
@@ -37,17 +41,18 @@
         <div class="d-flex justify-content-around">
           <div class="col-6">
             <div class="d-flex justify-content-around bg-primary">
-              <button onclick="betTenDallers(10)">$$$</button>
-              <button onclick="fiftyOnTeamOne()">$$$</button>
-              <button onclick="hundredOnTeamOne()">$$$</button>
-              <button onclick="betItAll()">$$$$$$$$</button>
+              <button onclick="makeABet(10)">$10</button>
+              <button onclick="makeABet(25)">$25</button>
+              <button onclick="makeABet(100)">$100</button>
+              <button onclick="betItAll()">ALL IN</button>
             </div>
           </div>
           <div class="col-6">
             <div class="d-flex justify-content-around bg-warning">
-              <button>$$$</button>
-              <button>$$$</button>
-              <button>$$$</button>
+              <button onclick="makeABet(10)">$10</button>
+              <button onclick="makeABet(25)">$25</button>
+              <button onclick="makeABet(100)">$100</button>
+              <button onclick="betItAll()">ALL IN</button>
             </div>
           </div>
         </div>

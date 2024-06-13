@@ -147,52 +147,33 @@ function drawTeams() {
     console.log('team 2', playerTwoEmoji);
 }
 // NOTE user a pramoiter "fnc name(pramoiter)"
-function tenOnTeamOne(money) {
-    let money = document.getElementById('back')
+function makeABet(money) {
+    let dallier = document.getElementById('back')
     money.innerText = bank
 
     const chances = Math.ceil(Math.random() * 2)
     if (chances == 1) {
-        bank -= 10
+        bank -= money
     }
     else {
-        bank += 10
+        bank += money
     }
-    money.innerText = bank
+    dallier.innerText = bank
     console.log(bank)
 }
 
-function fiftyOnTeamOne() {
-    const chances = Math.ceil(Math.random() * 2)
-    if (chances == 1) {
-        bank -= 50
-    }
-    else {
-        bank += 50
-    }
-
-    console.log(bank)
-}
-function hundredOnTeamOne() {
-    const chances = Math.ceil(Math.random() * 2)
-    if (chances == 1) {
-        bank -= 100
-    }
-    else {
-        bank += 100
-    }
-
-    console.log(bank)
-}
 function betItAll() {
+    let dallier = document.getElementById('back')
     const chances = Math.ceil(Math.random() * 2)
     if (chances == 1) {
+        bank = bank * 2
+    }
+    else {
         bank -= bank
     }
-    else {
-        bank += bank
-    }
-
     console.log(bank)
+
+    dallier.innerText = bank
 }
 separateTeams()
+drawTeams()
