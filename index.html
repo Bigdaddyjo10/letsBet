@@ -9,30 +9,30 @@
 
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="bg-light img-background">
     <header>
       <div class="container">
         <div class="row">
           <div class="col-12">
             <div class="d-flex justify-content-center m-3">
-              <h1 class="fw-bolder">May the beast team win!!!</h1>
+              <h1 class="fw-bolder text-light bg-black">May the beast team win!!!</h1>
             </div>
           </div>
         </div>
       </div>
     </header>
-    <main class="container">
+    <main class="container p-5">
       <div class="row">
         <div class="col-12">
-          <div class="d-flex justify-content-around">
-            <div id="teamOne d-flex">
-              <p class="fs-1 text-primary">Team Flat!</p>
+          <div class="d-flex justify-content-around bg-black">
+            <div id="teamOne">
+              <p class="fs-1 text-light">Team Flat!</p>
             </div>
             <div>
-              <p class="fs-3 text-success">Your mulla: $<samp id="back">100</samp></p>
+              <p class="fs-2 text-success">Your mulla: $<samp id="back">100</samp></p>
             </div>
             <div id="teamTwo">
-              <p class="fs-1 text-warning">Team Phat!</p>
+              <p class="fs-1 text-light">Team Phat!</p>
             </div>
           </div>
         </div>
@@ -40,24 +40,29 @@
       <div class="row">
         <div class="d-flex justify-content-around">
           <div class="col-6">
-            <div class="d-flex justify-content-around bg-primary">
-              <button onclick="makeABet(10)">$10</button>
-              <button onclick="makeABet(25)">$25</button>
-              <button onclick="makeABet(100)">$100</button>
-              <button onclick="betItAll()">ALL IN</button>
+            <div class="p-5">
+              <div class="d-flex justify-content-around fs-1 p-5">
+                <button class="bg-success text-light btn btn-lg" onclick="makeABet(10)">$10</button>
+                <button class="bg-success text-light btn btn-lg" onclick="makeABet(25)">$25</button>
+                <button class="bg-success text-light btn btn-lg" onclick="makeABet(100)">$100</button>
+                <button class="btn btn-lg bg-success text-light" onclick="betItAll()">ALL IN</button>
+              </div>
             </div>
           </div>
           <div class="col-6">
-            <div class="d-flex justify-content-around bg-warning">
-              <button onclick="makeABet(10)">$10</button>
-              <button onclick="makeABet(25)">$25</button>
-              <button onclick="makeABet(100)">$100</button>
-              <button onclick="betItAll()">ALL IN</button>
+            <div class="p-5">
+              <div class="d-flex justify-content-around p-5">
+                <button class="btn btn-lg bg-body text-black" onclick="makeABet(10)">$10</button>
+                <button class="btn btn-lg bg-body text-black" onclick="makeABet(25)">$25</button>
+                <button class="btn btn-lg bg-body text-black" onclick="makeABet(100)">$100</button>
+                <button class="btn btn-lg bg-body text-black" onclick="betItAll()">ALL IN</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </main>
-    <script src="app.js"></script>
+    <footer></footer>
+    <script src="app.js" defer></script>
   </body>
 </html>

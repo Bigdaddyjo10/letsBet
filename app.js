@@ -137,16 +137,16 @@ function drawTeams() {
     const teamOnePlayers = players.filter((player) => player.teamNumber == 1)
     let playerEmoji = ""
     teamOnePlayers.forEach((players) => playerEmoji += players.emoji)
-    teamOne.innerHTML += `<p>${playerEmoji}</p>`
+    teamOne.innerHTML += `<p class="fs-2">${playerEmoji}</p>`
     console.log('team 1', playerEmoji);
 
     const teamTowPlayers = players.filter((player) => player.teamNumber == 2)
     let playerTwoEmoji = ""
     teamTowPlayers.forEach((players) => playerTwoEmoji += players.emoji)
-    teamTwo.innerHTML += `<p>${playerTwoEmoji}</p>`
+    teamTwo.innerHTML += `<p class="fs-2">${playerTwoEmoji}</p>`
     console.log('team 2', playerTwoEmoji);
 }
-// NOTE user a pramoiter "fnc name(pramoiter)"
+
 function makeABet(money) {
     let dallier = document.getElementById('back')
     money.innerText = bank
